@@ -1,18 +1,20 @@
+# TODO_APP
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Welcome to the VS Code Java world. This project is a simple TODO application built using **Java** and **MySQL**.
 
 ## Folder Structure
 
-The workspace contains two folders by default, where:
+The workspace contains the following folders:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `src`: Java source files  
+- `lib`: external dependencies  
+- `bin`: compiled output files  
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> You can customize this structure in `.vscode/settings.json` if needed.
 
 ## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+You can manage dependencies using the `JAVA PROJECTS` view in VS Code.  
+For more info
