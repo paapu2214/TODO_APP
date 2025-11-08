@@ -1,204 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STUDENT FORM</title>
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT FORM</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
 
-    h1 {
-        margin-bottom: 15px;
-        text-align: center;
-    }
+        h1 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
 
-    .outer-box {
-        border: 3px solid black;
-        padding: 10px;
-        width: 440px;
-        background-color: white;
-    }
+        .outer-box {
+            border: 3px solid black;
+            padding: 10px;
+            width: 440px;
+            background-color: white;
+        }
 
-    table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 2px;
-    }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 2px;
+        }
 
-    td {
-        border: 3px solid #999;
-        border-radius: 2px;
-        padding: 10px;
-        background-color: #f8f8f8;
-        vertical-align: middle;
-    }
+        td {
+            border: 3px solid #999;
+            border-radius: 2px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            vertical-align: middle;
+        }
 
-    label {
-        font-weight: bold;
-    }
+        label {
+            font-weight: bold;
+        }
 
-    input[type="text"],
-    input[type="number"],
-    input[type="email"],
-    select {
-        width: 100%;
-        padding: 7px;
-        border: 1.5px solid #ccc;
-        border-radius: 2px;
-        box-sizing: border-box;
-    }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 7px;
+            border: 1.5px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
 
-    .save-btn {
-        width: 100%;
-        background-color: #9fffc5;
-        border: 1px solid #7ceba6;
-        padding: 10px;
-        font-weight: bold;
-        cursor: pointer;
-        font-size: 15px;
-        border-radius: 2px;
-    }
+        .save-btn {
+            width: 100%;
+            background-color: #9fffc5;
+            border: 1px solid #7ceba6;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 15px;
+            border-radius: 2px;
+        }
 
-    .save-btn:hover {
-        background-color: #81f0b2;
-    }
+        .save-btn:hover {
+            background-color: #81f0b2;
+        }
 
-    .outer-box2 {
-        margin: 20px;
-        border: 3px solid black;
-        padding: 0px;
-        width: 700px;
-        background-color: white;
-    }
+        .outer-box2 {
+            margin: 20px;
+            border: 3px solid black;
+            padding: 0px;
+            width: 700px;
+            background-color: white;
+        }
 
-    .student-table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 2px;
-    }
+        .student-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 2px;
+        }
 
-    th {
-        border: 3px solid #999;
-        border-radius: 2px;
-        padding: 10px;
-        background-color: #f8f8f8;
-        vertical-align: middle;
-    }
-</style>
+        th {
+            border: 3px solid #999;
+            border-radius: 2px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            vertical-align: middle;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>STUDENT FORM</h1>
+    <h1>STUDENT FORM</h1>
 
-<div class="outer-box">
-    <table>
-        <tr>
-            <td><label for="name">Name</label></td>
-            <td><input type="text" id="name"></td>
-        </tr>
-        <tr>
-            <td><label for="age">Age</label></td>
-            <td><input type="number" id="age"></td>
-        </tr>
-        <tr>
-            <td><label>Gender</label></td>
-            <td>
-                <input type="radio" name="gender" value="Male"> Male
-                <input type="radio" name="gender" value="Female"> Female
-            </td>
-        </tr>
-        <tr>
-            <td><label for="course">Course</label></td>
-            <td>
-                <select id="course">
-                    <option value="Java">Java</option>
-                    <option value="SQL">SQL</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="Selenium">Selenium</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="email">E-mail</label></td>
-            <td><input type="email" id="email"></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <button class="save-btn" onclick="saveData()">Save</button>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<div class="outer-box2">
-    <table class="student-table" id="studentTable">
-        <thead>
+    <div class="outer-box">
+        <table>
             <tr>
-                <th>NAME</th>
-                <th>AGE</th>
-                <th>COURSE</th>
-                <th>GENDER</th>
-                <th>EMAIL</th>
-                
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name"></td>
             </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" id="age"></td>
+            </tr>
+            <tr>
+                <td><label>Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td><label for="course">Course</label></td>
+                <td>
+                    <select id="course">
+                        <option value="Java">Java</option>
+                        <option value="SQL">SQL</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Selenium">Selenium</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">E-mail</label></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="save-btn" onclick="saveData()">Save</button>
+                </td>
+            </tr>
 
-<script>
-function saveData() {
-    var name = document.getElementById("name").value;
-    var age = document.getElementById("age").value;
-    var course = document.getElementById("course").value;
-    var email = document.getElementById("email").value;
-    var gender = document.querySelector('input[name="gender"]:checked');
+        </table>
+    </div>
 
-    if (!name || !age || !course || !email || !gender) {
-        alert("Please fill all fields!");
-        return;
-    }
+    <div class="outer-box2">
+        <table class="student-table" id="studentTable">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>AGE</th>
+                    <th>COURSE</th>
+                    <th>GENDER</th>
+                    <th>EMAIL</th>
+                    <th>ACTION</th>
 
-    // Send data to backend (Java)
-    var data = `name=${name}&age=${age}&course=${course}&gender=${gender.value}&email=${email}`;
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:8080/save", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 
-    xhr.onload = function () {
-    if (xhr.status === 200) {
-        alert(" Data saved to MySQL successfully!");
-    } else {
-        alert(" Error saving to DB: " + xhr.responseText);
-    }
-};
+    <script>
+        function saveData() {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var course = document.getElementById("course").value;
+            var email = document.getElementById("email").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
 
-    xhr.send(data);
-
-    // Add new row to table instantly
-    var tbody = document.getElementById("studentTable").getElementsByTagName('tbody')[0];
-    var newRow = tbody.insertRow();
-    newRow.insertCell(0).innerText = name;
-    newRow.insertCell(1).innerText = age;
-    newRow.insertCell(2).innerText = course;
-    newRow.insertCell(3).innerText = gender.value;
-    newRow.insertCell(4).innerText = email;
+            if (!name || !age || !course || !email || !gender) {
+                alert("Please fill all fields!");
+                return;
+            }
 
 
-    // Clear form fields
-    document.getElementById("name").value = "";
-    document.getElementById("age").value = "";
-    document.getElementById("email").value = "";
-    document.querySelectorAll('input[name="gender"]').forEach(r => r.checked = false);
-    document.getElementById("course").selectedIndex = 0;
-}
-</script>
+            // Send data to backend (Java)
+            var data = `name=${name}&age=${age}&course=${course}&gender=${gender.value}&email=${email}`;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://localhost:8080/save", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    alert(" Data saved to MySQL successfully!");
+                } else {
+                    alert(" Error saving to DB: " + xhr.responseText);
+                }
+            };
+
+            xhr.send(data);
+
+            // Add new row to table instantly
+
+
+            // Clear form fields
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("email").value = "";
+            document.querySelectorAll('input[name="gender"]').forEach(r => r.checked = false);
+            document.getElementById("course").selectedIndex = 0;
+            document.getElementById("dltbtn")
+        }
+        function loadStudents() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost:8080/students", true);
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var students = JSON.parse(xhr.responseText);
+                    var tbody = document.querySelector("#studentTable tbody");
+                    tbody.innerHTML = "";
+
+                    for (var i = 0; i < students.length; i++) {
+                        var s = students[i];
+
+                        var row = tbody.insertRow();
+                        row.insertCell(0).innerText = s.name;
+                        row.insertCell(1).innerText = s.age;
+                        row.insertCell(2).innerText = s.course;
+                        row.insertCell(3).innerText = s.gender;
+                        row.insertCell(4).innerText = s.email;
+
+                        var deleteBtn = document.createElement("button");
+                        deleteBtn.innerText = "Delete";
+                        deleteBtn.onclick = function () {
+                            if (confirm("Are you sure to delete" + s.name + "?")) {
+                                deleteData(s.id);
+                            }
+
+                        };
+                        row.insertCell(5).appendChild(deleteBtn);
+
+
+                    }
+
+                } else {
+                    alert("Failed to load data from DataBase");
+                }
+            };
+            xhr.send();
+        }
+        window.onload = loadStudents;
+
+        function deleteData(id) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost:8080/delete?id=" + id, true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    alert("Deleted Successfully!");
+                    loadStudents();
+                } else {
+                    alert("Error deleting:" + xhr.responseText);
+                }
+            };
+            xhr.send();
+        }
+    </script>
 </body>
+
 </html>
